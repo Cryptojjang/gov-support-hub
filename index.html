@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지원사업 모아보기 | 소상공인·창업 정부지원 공고 한눈에</title>
+<meta name="description" content="소상공인, 예비창업자, 창업 초기 기업이 지금 신청할 수 있는 정부·지자체 지원사업 공고를 매일 자동으로 모아 보여주고 신청 서류 초안까지 만들어 드립니다.">
+<meta property="og:title" content="지원사업 모아보기 - 지금 신청 가능한 정부지원 공고">
+<meta property="og:description" content="기업마당·K-Startup 공고를 매일 자동 수집. 맞춤 추천과 서류 작성 도우미 제공.">
+<meta name="theme-color" content="#1849a9">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231849a9'/><path d='M18 34l9 9 19-21' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#/"><span class="logo">✓</span><span>지원사업 <b>모아보기</b></span></a>
+    <nav class="nav" id="nav">
+      <a href="#/" data-v="home">홈</a>
+      <a href="#/list" data-v="list">전체 공고</a>
+      <a href="#/match" data-v="match">맞춤 찾기</a>
+      <a href="#/docs" data-v="docs">서류 작성</a>
+      <a href="#/saved" data-v="saved">관심 공고 <span id="savedCount" class="pill-count"></span></a>
+      <a href="#/guide" data-v="guide">이용 가이드</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app" class="wrap">
+  <div class="loading" id="loading">공고 데이터를 불러오는 중…</div>
+</main>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-back" data-close></div>
+  <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="modal-x" data-close aria-label="닫기">×</button>
+    <div id="modalBody"></div>
+  </article>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>데이터 출처: <a href="https://www.bizinfo.go.kr" target="_blank" rel="noopener">기업마당</a>(중소벤처기업부), <a href="https://www.k-startup.go.kr" target="_blank" rel="noopener">K-Startup</a>(창업진흥원) 공개 공고. 매일 오전 자동 업데이트됩니다.</p>
+    <p class="muted">공고 내용은 수행기관 사정에 따라 변경될 수 있습니다. 최종 신청 전 첨부된 공고문 원본으로 세부 요건을 한 번 더 확인하세요. 입력한 사업 정보는 이 브라우저에만 저장되며 서버로 전송되지 않습니다.</p>
+  </div>
+</footer>
+
+<script src="assets/docs.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
